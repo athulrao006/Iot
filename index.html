@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LED Light ON/OFF</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LED Toggle</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        #led {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>LED Light ON/OFF</h1>
-        <img id="ledImage" src=" https://github.com/athulrao006/Iot/blob/main/off.png" alt="LED Off">
-        <button id="toggleButton">Turn ON</button>
-    </div>
-    <script src="script.js"></script>
+
+    <h2>Athul Rao Iot control dashboard</h2>
+    <img id="led" src="led-off.png" alt="LED Light" onclick="toggleLED()">
+
+    <script>
+        let isOn = false;
+
+        function toggleLED() {
+            isOn = !isOn;
+            document.getElementById("led").src = isOn ? "led-on.png" : "led-off.png";
+        }
+    </script>
+
 </body>
 </html>
 
