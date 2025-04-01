@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LED Toggle</title>
+    
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+    <script defer src="script.js"></script>
+
     <style>
         body {
             text-align: center;
@@ -19,17 +26,8 @@
 </head>
 <body>
 
-    <h2>Athul Rao Iot control dashboard</h2>
-    <img id="led" src="led-off.png" alt="LED Light" onclick="toggleLED()">
-
-    <script>
-        let isOn = false;
-
-        function toggleLED() {
-            isOn = !isOn;
-            document.getElementById("led").src = isOn ? "led-on.png" : "led-off.png";
-        }
-    </script>
+    <h2>Click the LED to Toggle ON/OFF</h2>
+    <img id="led" src="led-off.png" alt="LED Light">
 
 </body>
 </html>
